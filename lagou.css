@@ -1,0 +1,749 @@
+/* 
+单行文本的溢出显示省略号
+overflow: hidden; 超出部分隐藏
+text-overflow:ellipsis; 超出部分显示省略号
+white-space: nowrap; 规定段落中的文本不进行换行
+
+
+多行文本溢出显示省略号
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+
+*/
+
+/* input和button在一行写，设置了相同的高，相同的边框，top部好像差1/2像素距离
+解决： 在调试的时候，加大边框的大小，发现边框居然是向里增大的，赶紧看看button标签的默认样式，果然box-sizing的值为border-box！
+①只需要把box-sizing的值改为content-box就可以啦！注意要初始化padding和margin的值喔！
+②按钮还是比输入框高一点点，这是基线的问题，应该设置 vertical-align : top; 这样就自然能对齐了，而不需要用相对定位或负值margin将按钮移下来。
+*/
+
+/* input和button左右，
+原因：真正意义上的inline-block水平呈现的元素间，换行显示或空格分隔的情况下会有间距
+解决：去除inline-block元素间间距的N种方法
+两个常用的方法;
+1.在父元素设置font-size:0px;
+2.去掉代码中两个input间的空格，
+3.有种显示上比较优雅的方式，就是用注释（这是从张鑫旭大神那看来的）<input><!-- |
+ --><input>
+
+ 文章链接 
+ https://blog.csdn.net/MrZZhou/article/details/72757936
+ https://blog.csdn.net/kouwoo/article/details/41743669
+ https://www.cnblogs.com/chaoyuehedy/p/9178807.html
+
+*/
+
+/* input获得焦点时，边框显示其他颜色  
+解决： 获得焦点使用:focus伪类，避开 outline，选择 border，
+文章详细解析 https://segmentfault.com/a/1190000003936268
+*/
+
+/* input内文字缩进 
+text-indent: 12px;
+*/
+
+/* 居中
+top: 50%;
+margin-top:自身高度的一半;
+*/
+
+/* 左浮动 */
+.fl {
+    float: left;
+}
+
+/* 右浮动 */
+.fr {
+    float: right;
+}
+
+/* 清除浮动 */
+.clearf:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 版心设置，且居中 */
+.container {
+    height: 100%;
+    width: 1216px;
+    margin: 0 auto;
+}
+
+/* input框 */
+.input {
+    border: none;
+}
+
+.header_top {
+    background-color: #32373e;
+    height: 40px;
+}
+
+.header_top_left {
+    /* background-color: lightgreen; */
+    height: 40px;
+    width: 60%;
+}
+
+.header_top_left_1Txt,
+header_top_left_2list {
+    height: 100%;
+}
+
+.header_top_left_1Txt {
+    line-height: 40px;
+}
+
+.header_top_left_2list {
+    line-height: 40px;
+}
+
+/* 有图片和文字的时候居中，用line-height=height这个垂直居中的作用，结果不行.....要添加一个vertical-align:middle就OK了 */
+.logo {
+    display: inline-block;
+    width: 43px;
+    height: 40px;
+    vertical-align: middle;
+    background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/header_c/modules/topbar/img/sprite_361857f.png);
+    background-position: -10px -1px;
+    background-size: 64px 128px;
+}
+
+.city {
+    display: inline-block;
+    color: #23c482;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 34px;
+}
+
+.switch {
+    display: inline-block;
+    height: 40px;
+    vertical-align: middle;
+    color: #afb5c0;
+    margin-left: 14px;
+    margin-right: 34px;
+}
+
+.switch:hover {
+    color: #fff;
+}
+
+.header_top_left_2list li {
+    width: 70px;
+}
+
+.header_top_left_2list li:hover {
+    background-color: #24282c;
+}
+
+/* 把a标签和li标签同大小，使得点到li时，样式也是cursor:pointer */
+.header_top_left_2list a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #afb5c0;
+}
+
+.header_top_left_2list a:hover {
+    color: #fff;
+}
+
+
+.header_top_right {
+    /* background-color: violet; */
+    height: 40px;
+    width: 40%;
+}
+
+.UlList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.UlList li {
+    height: 40px;
+    line-height: 40px;
+    align-items: center;
+}
+
+.UlList li a {
+    color: #afb5c0;
+}
+
+.UlList li a:hover {
+    color: #fff;
+}
+
+#loginreg {
+    position: relative;
+}
+
+.icon_loginReg::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -26px;
+    width: 18px;
+    height: 18px;
+    background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/header_c/modules/topbar/img/sprite_361857f.png);
+    background-position: -10px -41px;
+    background-size: 64px 128px;
+}
+
+.icon_loginReg:hover::before {
+    background-position: -10px -69px;
+}
+
+.icon_loginReg:hover {
+    color: #fff;
+}
+
+
+#APP {
+    position: relative;
+}
+
+#icon_app::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -26px;
+    width: 18px;
+    height: 18px;
+    background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/header_c/modules/topbar/img/sprite_361857f.png);
+    background-position: -4px -96px;
+    background-size: 64px 128px;
+}
+
+#icon_app:hover {
+    color: #00b38a;
+}
+
+
+.header_bottom {
+    background-color: #00b38a;
+    height: 120px;
+}
+
+.header_bottom_left {
+    /* background-color: brown; */
+    height: 120px;
+    width: 60%;
+    display: flex;
+}
+
+.ad-logo-box img {
+    width: 228px;
+    height: 120px;
+}
+
+#text-img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-img {
+    width: 334px;
+    height: 31px;
+}
+
+#text-img-box p {
+    height: 22px;
+    color: #FFF;
+    font-family: PingFangSC-Medium;
+    margin-top: 4px;
+}
+
+.header_bottom_right {
+    /* background-color: sandybrown; */
+    height: 120px;
+    width: 40%;
+    line-height: 120px;
+}
+
+#register-login-form {
+    display: flex;
+    /* height: 36px; */
+}
+
+.register-login-form1 {
+    position: relative;
+}
+
+.register-login-form1 input {
+    width: 163px;
+    height: 36px;
+    color: #757575;
+    outline: none;
+    text-indent: 12px;
+}
+
+.register-login-form1 a {
+    position: absolute;
+    left: -54px;
+    top: 50%;
+    margin-top: -18px;
+    z-index: 1;
+    display: inline-block;
+    width: 54px;
+    height: 36px;
+    background-color: #fff;
+    /* border: #fff solid 1px; */
+    line-height: 36px;
+    color: #333;
+}
+
+
+
+.register-login-form2 {
+    position: relative;
+}
+
+.register-login-form2 input {
+    /* width: 148px; */
+    width: 94px;
+    height: 36px;
+    margin-left: 8px;
+    /* border: #00b38a solid 1px; */
+    color: #757575;
+    outline: none;
+    text-indent: 12px;
+}
+
+.register-login-form2 a {
+    position: absolute;
+    right: -53px;
+    top: 50%;
+    margin-top: -18px;
+    z-index: 1;
+    display: inline-block;
+    width: 54px;
+    height: 36px;
+    background-color: #fff;
+    /* border: #00b38a solid 1px; */
+    line-height: 36px;
+    color: #00b38a;
+}
+
+.register-login-form-submit {
+    margin-left: 62px;
+    width: 107px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #ccefe7;
+    font-weight: bolder;
+    opacity: .8;
+    border: 1px solid #ccefe7;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.register-login-form-submit::selection {
+    background-color: #00b38a;
+}
+
+/* 搜索框区域 */
+.search_box {
+    padding-top: 30px;
+    background-color: #f2f5f4;
+    height: 102px;
+    width: 100%;
+}
+
+.search {
+    width: 937px;
+    height: 47px;
+    line-height: 47px;
+    /* background: rebeccapurple; */
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.search input {
+    width: 794px;
+    height: 45px;
+    border: 1px solid #e8e8e8;
+    vertical-align: top;
+    text-indent: 12px;
+    color: #777;
+    outline: none;
+}
+
+.search input:focus {
+    border: 1px solid #00a57f;
+}
+
+.search_btn {
+    width: 134px;
+    height: 45px;
+    border: 1px solid #00a57f;
+    background-color: #00a57f;
+    color: #ffffea;
+    font-size: 18px;
+    vertical-align: top;
+    box-sizing: content-box;
+}
+
+.search_keys {
+    width: 937px;
+    height: 47px;
+    line-height: 47px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.searchList li {
+    margin-right: 20px;
+}
+
+.searchList li a {
+    color: #00b38a;
+}
+
+#hotKey {
+    color: #777;
+}
+
+/* banner图区域 */
+.banner_box {
+    height: 430px;
+    /* background-color: pink; */
+}
+
+.banner_left {
+    height: 430px;
+    width: 300px;
+    padding-top: 46px;
+    box-sizing: border-box;
+    /* background-color: peru; */
+    margin-right: 60px;
+}
+
+.banner_left_UList {
+    position: relative;
+}
+
+.banner_left_UList li {
+    height: 47px;
+    line-height: 47px;
+}
+
+.banner_left_UList li:last-child span::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 20px;
+    right: 3px;
+    border-top: 1px solid #656565;
+    border-right: 1px solid #656565;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.banner_left_UList li a {
+    /* font-size: 14px; */
+    text-align: center;
+    padding: 0 8px;
+    color: #555;
+    font-family: "Hiragino Sans GB", "Microsoft Yahei", SimSun, Arial, "Helvetica Neue", Helvetica;
+}
+
+.banner_left_UList li a:hover {
+    color: #00b38a;
+}
+
+.banner_left_UList li:first-child a {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    cursor: Auto;
+}
+
+.banner_left_UList li:last-child {
+    cursor: Default;
+}
+
+.banner_right {
+    height: 430px;
+    width: 840px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    /* background-color: purple; */
+    position: relative;
+}
+
+.banner_right img {
+    width: 100%;
+    height: 349px;
+}
+
+.lt,
+.gt {
+    font-family: 'Songti';
+    position: absolute;
+    font-size: 48px;
+    color: #757478;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.lt {
+    left: 30px;
+}
+
+.gt {
+    right: 0;
+}
+
+/* 主体部分 */
+.main_box {
+    /* background-color: #00a57f; */
+    margin-top: 20px;
+    height: 118px;
+    text-align: left;
+}
+
+.main_box nav {
+    height: 53px;
+    /* background-color: pink; */
+    border-bottom: 1px solid #E8E8E8;
+
+}
+
+.main_box nav a {
+    display: inline-block;
+    height: 53px;
+    line-height: 53px;
+    margin-right: 70px;
+    color: #999;
+}
+
+.main_box nav a:hover {
+    cursor: pointer;
+}
+
+/* 
+非可激活元素，变为可使用:focus方法
+https://www.cnblogs.com/skura23/p/6505352.html
+*/
+.main_box nav a:focus {
+    border-bottom: 2px solid #333;
+    color: #333;
+    outline: none;
+}
+
+.ques {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: #afb5c0;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.tips {
+    height: 65px;
+    line-height: 65px;
+}
+
+.know {
+    display: inline-block;
+    margin-left: 60px;
+    color: #00b38a;
+    cursor: pointer;
+}
+
+/* main bottom */
+.main_bottom {
+    height: 648px;
+}
+
+.box {
+    box-sizing: border-box;
+    /* position: relative; */
+    width: 389px;
+    height: 200px;
+    padding: 20px 18px 0;
+    margin-right: 16px;
+    border: 1px solid #EAEEED;
+    background-color: #fff;
+    /* background-color: pink; */
+}
+
+.line2 .box {
+    margin: 16px 16px 16px 0;
+}
+
+.position {
+    font-size: 18px;
+}
+
+.time {
+    color: #999;
+    font-size: 14px;
+}
+
+.Chat_me {
+    display: inline-block;
+    /* position: relative; */
+    width: 16px;
+    height: 16px;
+    background: url(https://www.lgstatic.com/lg-www-fed/index/modules/job_list/img/icon_chat2_d162651.png) no-repeat 0 0;
+    cursor: pointer;
+}
+
+.salary {
+    font-size: 16px;
+    color: #fa6041;
+
+}
+
+.experience {
+    height: 30px;
+    line-height: 30px;
+    color: #777;
+}
+
+.dash {
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px dashed #E0E0E0;
+}
+.line_box_txt{
+    margin-bottom: 20px;
+}
+
+.line_box_img {
+    width: 40px;
+    height: 40px;
+    margin-right: 54px;
+}
+
+.line_box_img img {
+    width: 100%;
+    height: 100%;
+}
+
+#tags {
+    display: inline-block;
+    width: 61px;
+    height: 26px;
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #999;
+    border: 1px solid rgb(83, 178, 223);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.list_more {
+    display: block;
+    width: 387px;
+    height: 42px;
+    line-height: 42px;
+    margin: 16px auto 0;
+    background: #FFF;
+    border: 1px solid #00B38A;
+    font-size: 16px;
+    color: #00b38a;
+    text-align: center;
+
+}
+
+.list_more:hover {
+    color: #fff;
+    background-color: #00b38a;
+}
+
+/* part2_box */
+.part2_section{
+    width: 1216px;
+    height: 572px;
+}
+.part2_line{
+    height:300px;
+}
+.part2_box1 {
+    margin-top: 52px;
+}
+
+.part2_box2 {
+    box-sizing: border-box;
+    width: 288px;
+    height: 270px;
+    margin-top: 16px;
+    margin-right: 16px;
+    border: 1px solid #EEE;
+}
+
+.part2_imgbox {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.part2_imgbox img {
+    width: 100%;
+    height: 100%;
+}
+
+.part2_Com_info {
+    color: #333;
+    margin-top: 13px;
+    margin-bottom: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.part2_Com_catalogue {
+    margin-top: 3px;
+    margin-bottom: 0;
+    color: #999;
+    text-align: center;
+}
+
+.part2_Com_slogan {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #555;
+    text-align: center;
+}
+.judge {
+    margin-top: 17px;
+    text-align: center;
+    width: 90px;
+}
+
+.judge span {
+    display: block;
+}
+
+.after{
+   border-left: 1px solid #EDEDED;
+   border-right: 1px solid #EDEDED;
+}
+
+/* 友情链接 */
+.link_box{
+    height: 100px;
+}

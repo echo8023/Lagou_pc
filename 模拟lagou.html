@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>拉钩-专业的互联网招聘平台</title>
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="lagou.css" />
+    <!-- 引入重置CSS样式 淘宝 -->
+    <link rel="stylesheet" href="reset.css" />
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="header_top">
+            <div class="container clearf">
+                <div class="header_top_left fl">
+                    <div class="header_top_left_1Txt fl">
+                        <a href="http://www.lagou.com" class="logo"></a>
+                        <a href="" class="city">全国站</a>
+                        <a href="" class="switch">[切换城市]</a>
+                    </div>
+                    <ul class="header_top_left_2list fl">
+                        <li class="fl"><a href="">首页</a></li>
+                        <li class="fl"><a href="">公司</a></li>
+                        <li class="fl"><a href="">校园招聘</a></li>
+                        <li class="fl"><a href="">言职</a></li>
+                        <li class="fl"><a href="">课程</a></li>
+                    </ul>
+                </div>
+                <div class="header_top_right fr">
+                    <!-- 快捷写法 li*4>a -->
+                    <div class="UlList">
+                        <li id="upload-resume"><a href="">上传简历</a></li>
+                        <li id="quick-entrance"><a href="">职位订阅</a></li>
+                        <li id="loginreg">
+                            <a href="" class="icon_loginReg">登录</a>
+                            <span>|</span>
+                            <a href="">注册</a>
+                        </li>
+                        <li id="APP">
+                            <a href="" id="icon_app">拉钩APP</a>
+                        </li>
+                        <li><a href="">登录企业版</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="container clearf">
+                <div class="header_bottom_left fl">
+                    <div class="ad-logo-box">
+                        <img src="https://www.lgstatic.com/lg-www-fed/common/widgets/un_login_banner/img/logo_41a2761.png"
+                            alt="ad-logo" />
+                    </div>
+                    <div id="text-img-box">
+                        <img src="https://www.lgstatic.com/lg-www-fed/common/widgets/un_login_banner/img/text_ae1d842.png"
+                            alt="text-img" class="text-img" />
+                        <p>816785家公司 | 6663416个职位，在拉勾等你</p>
+                    </div>
+                </div>
+                <div class="header_bottom_right fr">
+                    <div id="register-login-form">
+                        <div class="register-login-form1">
+                            <a>0086</a>
+                            <input type="text" placeholder="输入手机号" class="input" />
+                        </div>
+                        <div class="register-login-form2">
+                            <input type="text" placeholder="验证码" class="input" />
+                            <a>获取</a>
+                        </div>
+                        <div>
+                            <input type="submit" value="登录/注册" class="register-login-form-submit input" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 搜索框区域 -->
+    <section class="search_box">
+        <div class="container search_box_container">
+            <div class="search_box_container_div">
+                <div class="search">
+                    <input type="text" name="" id="" value="天眼查" /><!-- |
+            --><button class="search_btn">搜索</button>
+                </div>
+                <div class="search_keys">
+                    <ul class="searchList clearf">
+                        <li class="fl"><a href="" id="hotKey">热门搜索:</a></li>
+                        <li class="fl"><a href="">年底高薪招聘专场</a></li>
+                        <li class="fl"><a href="">IOS</a></li>
+                        <li class="fl"><a href="">java面试</a></li>
+                        <li class="fl"><a href="">架构设计</a></li>
+                        <li class="fl"><a href="">C++</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner图区域 -->
+    <section>
+        <div class="banner_box container clearf">
+            <div class="banner_left fl">
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">技术</a></li>
+                    <li class="fl"><a href="">Java</a></li>
+                    <li class="fl"><a href="">PHP</a></li>
+                    <li class="fl"><a href="">C++</a></li>
+                    <li class="fl"><a href="">区块链</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">产品</a></li>
+                    <li class="fl"><a href="">产品总监</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">设计</a></li>
+                    <li class="fl"><a href="">UI设计师</a></li>
+                    <li class="fl"><a href="">交互设计师</a></li>
+                    <li class="fl"><a href="">网页设计师</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">运营</a></li>
+                    <li class="fl"><a href="">新媒体运营</a></li>
+                    <li class="fl"><a href="">编辑</a></li>
+                    <li class="fl"><a href="">数据运营</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">市场</a></li>
+                    <li class="fl"><a href="">市场营销</a></li>
+                    <li class="fl"><a href="">市场推广</a></li>
+                    <li class="fl"><a href="">市场策划</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">销售</a></li>
+                    <li class="fl"><a href="">销售专员</a></li>
+                    <li class="fl"><a href="">销售经理</a></li>
+                    <li class="fl"><a href="">销售总监</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">职能</a></li>
+                    <li class="fl"><a href="">HR</a></li>
+                    <li class="fl"><a href="">行政</a></li>
+                    <li class="fl"><a href="">财务</a></li>
+                    <li class="fl"><a href="">审计</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+                <ul class="clearf banner_left_UList">
+                    <li class="fl"><a href="">游戏</a></li>
+                    <li class="fl"><a href="">小游戏开发</a></li>
+                    <li class="fl"><a href="">U3D</a></li>
+                    <li class="fl"><a href="">游戏策划</a></li>
+                    <li class="fl"><span></span></li>
+                </ul>
+            </div>
+            <div class="banner_right fl">
+                <div>
+                    <img src="https://www.lgstatic.com/thumbnail_1000x0/i/image3/M01/59/64/Cgq2xl37TY6AZSMeAAEwj8yJJN8223.JPG"
+                        alt="">
+                    <span class="lt">&lt;</span>
+                    <span class="gt">&gt;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 正文部分 -->
+    <main>
+        <div class="container main_box">
+            <div class="main_top">
+                <nav>
+                    <a tabindex="1">24Hour热门</a>
+                    <a tabindex="2">最新职位</a>
+                </nav>
+                <div class="tips">
+                    <span class="ques">?</span>过去24小时，最多人看过的岗位在这里
+                    <a class="know">我知道了</a>
+                </div>
+            </div>
+            <section class="container main_bottom">
+                <div class="line clearf">
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div>
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div>
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div>
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line line2 clearf">
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div class="clearf">
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div class="clearf">
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div class="clearf">
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line clearf">
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div>
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div>
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box fl">
+                        <div>
+                            <span class="position">前端开发</span>
+                            <span class="time">&ensp;[15:00发布]&ensp;</span>
+                            <span class="Chat_me"></span>
+                            <span class="salary fr">10K-20K</span>
+                        </div>
+                        <p class="experience">经验3-5年/本科</p>
+                        <div>
+                            <span id="tags">HTML</span>
+                            <span id="tags">CSS</span>
+                            <span id="tags">Javescript</span>
+                        </div>
+                        <hr class="dash">
+                        <div>
+                            <div class="fl line_box_img">
+                                <img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/94/0A/CgoB5l2QTmeARd8EAAA7qoLRA24478.png"
+                                    alt="com_logo">
+                            </div>
+                            <div class="fl line_box_txt">
+                                <p>婚礼纪</p>
+                                <p>消费生活/D轮及以上/杭州・古墩路</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.lagou.com/zhaopin/" target="_blank" class="list_more">查看更多</a>
+            </section>
+
+            <!-- part2 -->
+
+            <div class="main_top part2_box1">
+                <nav>
+                    <a tabindex="1">24Hour热门</a>
+                    <a tabindex="2">最新职位</a>
+                </nav>
+                <div class="tips">
+                    <span class="ques">?</span>过去24小时，最多人看过的岗位在这里
+                    <a class="know">我知道了</a>
+                </div>
+            </div>
+
+            <section class="part2_section">
+                <div class="part2_line">
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="part2_line">
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fl part2_box2">
+                        <div class="part2_imgbox">
+                            <img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/18/CA/CgqKkVb00eiAP2YNAAAeZLNlWwQ250.jpg"
+                                alt="">
+                        </div>
+                        <p class="part2_Com_info">前海信息</p>
+                        <p class="part2_Com_catalogue">数据服务/天使轮</p>
+                        <p class="part2_Com_slogan">前信专注于提供一站式大数据系统解决...</p>
+                        <hr class="dash">
+                        <div class="clearf judge_box">
+                            <a class="judge fl">
+                                <span>21</span>
+                                <span>面试评价</span>
+                            </a>
+                            <a class="judge fl after">
+                                <span>4</span>
+                                <span>在招职位</span>
+                            </a>
+                            <a class="judge fl">
+                                <span>73%</span>
+                                <span>简历处理率</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="https://www.lagou.com/zhaopin/" target="_blank" class="list_more">查看更多</a>
+            </section>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
